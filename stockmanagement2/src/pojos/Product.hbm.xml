@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 7, 2022 2:45:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="pojos.Product" table="product" catalog="stockmanagement" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="id" length="11" />
+            <generator class="assigned" />
+        </id>
+        <property name="pname" type="string">
+            <column name="pname" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" not-null="true" />
+        </property>
+        <property name="barcode" type="int">
+            <column name="barcode" not-null="true" />
+        </property>
+        <property name="cprice" type="float">
+            <column name="cprice" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="rprice" type="float">
+            <column name="rprice" precision="12" scale="0" not-null="true" />
+        </property>
+        <property name="qty" type="int">
+            <column name="qty" not-null="true" />
+        </property>
+        <property name="rlevel" type="int">
+            <column name="rlevel" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
